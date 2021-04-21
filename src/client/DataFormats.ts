@@ -36,7 +36,7 @@ export interface IFeature {
     geometry: IGeometry;
 }
 
-export interface ISections {
+export interface IGeoJson {
     type: string;
     features: IFeature[];
 }

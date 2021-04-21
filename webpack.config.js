@@ -14,6 +14,14 @@ module.exports = {
             configFile: "tsconfig.json" 
         }
       },
+      {
+        test: /\.css$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'css'
+        }
+      }
     ],
   },
   resolve: {
@@ -21,6 +29,6 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'public/js'),
+    path: path.resolve(__dirname, 'public'),
   },
 };

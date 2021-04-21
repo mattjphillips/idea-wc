@@ -42,7 +42,7 @@ export class IDEAApp extends LitElement {
     selectedIDs: string[] = [];
 
     @property()
-    uiState: IUIState = { tab: MainTab.Charts }
+    uiState: IUIState = { tab: MainTab.Home }
 
     @property()
     mapState: IMapTabState = { split: MapSplit.Split };
@@ -55,7 +55,7 @@ export class IDEAApp extends LitElement {
 
     processHash() {
         const hash = window.location.hash.substring(1);
-        this.uiState = { tab: hash as MainTab };
+        if (hash) this.uiState = { tab: hash as MainTab };
     }
 
     updated() {

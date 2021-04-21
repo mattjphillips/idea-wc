@@ -1,4 +1,3 @@
-
 import { css, customElement, html, LitElement, property } from "lit-element";
 import { IGeoJson, DistressLookup, TimelineLookup } from "../../DataFormats";
 
@@ -16,7 +15,7 @@ import proj4 from "proj4";
 import SelectInteraction from "ol/interaction/Select";
 import * as Condition from "ol/events/condition";
 
-import "openlayers/css/ol.css";
+import "ol/ol.css";
 
 class MapInstance {
 

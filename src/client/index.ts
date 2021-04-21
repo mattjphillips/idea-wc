@@ -55,7 +55,7 @@ export class IDEAApp extends LitElement {
 
     processHash() {
         const hash = window.location.hash.substring(1);
-        if (hash) this.uiState = { tab: hash as MainTab };
+        this.uiState = { tab: (hash || MainTab.Home) as MainTab };
     }
 
     updated() {
